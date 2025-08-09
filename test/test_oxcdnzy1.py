@@ -13,4 +13,4 @@ def test1():
     assert 1==1
 
 def test2(before_after):
-    assert 2==2
+    assert 2==1

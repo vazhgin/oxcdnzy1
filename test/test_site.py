@@ -19,5 +19,5 @@ def test_monitors(browser):
     # monitor.click()
     time.sleep(3)
     homepage.check_product_count(2)
-    # monitors = browser.find_elements(By.CSS_SELECTOR, value='.card')
+    # monitors = browser.find_elements(By.CSS_SELECTOR, value=".card")
     # assert len(monitors) == "2"
