@@ -5,7 +5,7 @@ import time
 import pytest
 
 @pytest.fixture()
-def test_open(browser):
+def test_open():
     options = Options()
     options.add_argument('--headless')
     browser = webdriver.Chrome(options=options)
