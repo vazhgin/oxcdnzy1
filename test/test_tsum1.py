@@ -1,12 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 import time
 
 def test_open():
-    options = Options()
-    options.add_argument('--headless')
-    browser = webdriver.Chrome(options=options)
+    browser = webdriver.Chrome()
     browser.get("https://www.tsum.ru/")
     time.sleep(3)
     men = browser.find_element(By.XPATH, '//a[@data-test-id="menCatalog"]')
@@ -62,7 +59,8 @@ def test_open():
     time.sleep(6)
     buy = browser.find_element(By.XPATH, '//button[@class="Button__button___eIaLo Button__primary___sDC89 Button__large___dAlVx Button__orange___h0Mfp Button__withoutIcon___uRcTi Button__fullWidth___aCeRi ConfirmationButton__btn___Qbxsb ConfirmationButton__online___yISnL"]')
     buy.click()
+    time.sleep(6)
     sms = browser.find_element(By.XPATH, '//h4[@data-test-id="inputSmsCodeTitle"]')
     print(sms.text)
-    time.sleep(3)
+    time.sleep(10)
     browser.quit()
