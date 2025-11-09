@@ -1,9 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import pytest
 
 browser = webdriver.Chrome()
 
+@pytest.fixture()
 def test_open():
  browser.get("http://testingchallenges.thetestingmap.org/")
  time.sleep(3)
@@ -61,5 +63,5 @@ def test_open():
  submit = browser.find_element(By.XPATH, '//input[@name="formSubmit"]')
  submit.click()
  otvet15 = browser.find_element(By.CLASS_NAME, 'values-tested')
- print(otvet15)
+ print(otvet15.text)
  time.sleep(3)
