@@ -1,11 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-import pytest
 
 browser = webdriver.Chrome()
 
-@pytest.fixture()
 def test_open():
  browser.get("http://testingchallenges.thetestingmap.org/")
  time.sleep(3)
